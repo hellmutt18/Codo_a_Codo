@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>integrador2_JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="Script.js"></script>
+  </head>
+  <body>
+
+<!--Nav Bar-->
+
+      <nav
+        class="navbar navbar-expand-lg navbar-dark p-3"
+        style="background-color: #353a40"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="/img/codoacodo.png"
+              alt=""
+              height="32"
+              class="d-inline-block align-text-top"
+            />Codo a Codo</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">
+                La conferencia</a
+              >
+              <a class="nav-link" href="#"> Los Oradores</a>
+              <a class="nav-link" href="#"> Lugar y Fecha</a>
+              <a class="nav-link" href="#"> Conviertete en orador</a>
+              <a class="nav-link" style="color: #29a744"> Compra tickets</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+<br>
+
+<!-- Cards-->
+<div class="container">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100 border-primary">
+      <div class="card-body text-center">
+        <h5 class="card-title">Estudiantes</h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p><b>80%</b></p>
+        <p class="card-text"><small class="text-muted">*presentar documentacion</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-info">
+      <div class="card-body text-center">
+        <h5 class="card-title">Trainee</h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p><b>50%</b></p>
+        <p class="card-text"><small class="text-muted">*presentar documentacion</small></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 border-warning">
+      <div class="card-body text-center">
+        <h5 class="card-title">Junior</h5>
+        <p class="card-text">Tienen un descuento</p>
+        <p><b>15%</b></p>
+        <p class="card-text"><small class="text-muted">*presentar documentacion</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!--Formulario-->
+<div class="container">
+  <p class="text-center my-2">VENTA</p>
+  <h2 class="text-center">VALOR DEL TICKET $200</h2>
+  <form>
+    <div class="form row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Nombre">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Apellido">
+      </div>
+    </div>
+    <br>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Correo">
+    </div>
+    <br>
+    <div class="form row">
+      <div class="col">
+        <label for="inputCantidad">Cantidad</label> <!--Segun la cantidad ingresada, el id almacena ese valor-->
+        <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad">
+      </div>
+      <div class="col">
+        <label for="inmputCategoria">Categoria</label>
+        <select id="inputCategoria" class="form-control">
+          <option value="80" selected>Estudiantes</option> <!-- Segun la cantidad ingresada, el id almacena ese valor-->
+          <option value="50">Trainee</option>
+          <option value="15">Junior</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" id="compraTotal" class="alert alert-primary" style="width:100%;" value="Total a pagar: $" role="alert" readonly>
+      </div>
+    </div>
+    <br>
+     <div class="form row">
+      <div class="col">
+        <button type="reset" class="btn btn-success btn-md">Borrar</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-success btn-md" onclick="resumir()">Resumen</button> <!--Llamado a la funcion desde el boton-->
+      </div>
+    </div>
+    </div>
+    <br>
+  </form>
+
+</div>
+
+<!--Footer-->
+<br>
+      <footer class="bg-dark text-white" style="background: linear-gradient(to-right, #1a323f,#1c4d69);">
+        <div class="container text-center">
+          <div class="row p-3 text-center">
+            <div class="col">Preguntas<br>Frecuentes
+            </div>
+            <div class="col">Contactanos
+            </div>
+            <div class="col">Prensa
+            </div>
+            <div class="col">Conferencia
+            </div>
+            <div class="col">Terminos y<br>Condiciones
+            </div>
+            <div class="col">Privacidad
+            </div>
+            <div class="col">Estudiantes
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
